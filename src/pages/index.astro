@@ -1,108 +1,170 @@
----
-import Layout from '../components/layout.astro';
----
-
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Reorientation Core Group</title>
 <style>
-.steps {
-  background: var(--light);
-  display: grid;
-  gap: 2rem;
-  grid-template-columns: min(90vw, 250px);
-  justify-content: center;
-  margin-top: 3rem;
-  padding: 5rem 5vw;
-  width: 100vw;
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
 }
-
-@media (min-width: 550px) {
-  .steps {
-    grid-template-columns: repeat(2, min(calc(50% - 1rem), 250px));
-  }
+.container{
+    width: 100%;
+    height: 100vh;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(images/background-image2.jpg);
+    background-position: center;
+    background-size: cover;
+    padding-left: 8%;
+    padding-right: 8%;
+    box-sizing: border-box;
 }
-
-@media (min-width: 1050px) {
-  .steps {
-    grid-template-columns: repeat(4, min(calc(25% - 1.5rem), 250px));
-  }
+.navbar{
+    height: 12%;
+    display: flex;
+    align-items: center;
 }
-
-.step {
-  background: var(--white);
-  border: 1px solid var(--lightBorder);
-  border-radius: var(--card-radius);
-  display: flex;
-  flex-direction: column;
-  font-size: 0.75rem;
-  padding: 1rem 1.5rem 1.5rem;
-  text-align: left;
-  box-shadow: 0 2px 4px rgb(14 30 37 / 12%);
+.logo{
+    width: 100px;
+    border-radius: 50px;
+    cursor: pointer;
 }
-
-.stepHeading {
-  font-size: 1rem;
-  font-weight: 600;
-  margin: 0;
+nav{
+    flex: 1;
+    text-align: right;
 }
-
+nav ul li {
+    list-style-type: none;
+    display: inline-block;
+    margin-left: 68px;
+}
+nav ul li a{
+    text-decoration: none;
+    color: white;
+    font-size: 13px;
+}
+nav ul li:hover{
+    background-color: #000;
+    width: 100px;
+    border-radius: 10px;
+}
+.row{
+    display: flex;
+    height: 88%;
+    align-items: center;
+}
+.col{
+    flex-basis: 50%;
+}
+h1{
+    color: rgb(10, 245, 10);
+    font-size: 100px;
+}
+p{
+    color: white;
+}
+button{
+    width: 180px;
+    font-size: 12px;
+    padding: 12px 0;
+    background: white;
+    border: 0;
+    border-radius: 20px;
+    outline: none;
+    margin-top: 30px;
+}
+button a{
+    text-decoration: none;
+    color: black;
+    font-size: medium;
+    font-weight: bold;
+}
+.card{
+    width: 100px;
+    height: 230px;
+    display: inline-block;
+    border-radius: 10px;
+    padding: 15px 25px;
+    cursor: pointer;
+    margin: 10px 15px;
+    transition: transform 0.5s;
+}
+.card1 {
+    background-image: url(images/recycle.jpg);
+    background-position: center;
+    background-size: cover;
+}
+.card2 {
+    background-image:  url(images/background-image1.jpg);
+    background-position: center;
+    background-size: cover;
+}
+.card3 {
+    background-image: url(images/sun.jpg);
+    background-position: center;
+    background-size: cover;
+}
+.card4 {
+    background-image: url(images/save.jpg);
+    background-position: center;
+    background-size: cover;
+}
+.card:hover{
+    transform: translateY(-10px);
+}
 
 </style>
+</head>
+<body>
+    <section class="container">
+        <header class="navbar">
+            <img src="images/logo.jpg" alt="logo here" class="logo">
+            <nav>
+                <ul>
+                    <li><a href="index.html">HOME</a></li>
+                    <li><a href="services.html">SERVICES</a></li>
+                    <li><a href="about.html">ABOUT US</a></li>
+                </ul>
+            </nav>
+        </header>
+        <section class="row">
 
-<Layout
-  title="Netlify Feature Tour"
-  description="This is a small site to show the most powerful features of Netlify quickly!"
-  home
->
-  <main class="steps">
-    <section class="step">
-      <h2 class="stepHeading">Deploy Previews</h2>
-      <p>
-        Every pull request is automatically built in an
-        identical-to-production environment for
-        <strong>painless QA, feedback, and review.</strong>
-      </p>
-      <a href="/deploy-previews" class="button">
-        Learn more <span class="sr-only">about Deploy Previews</span>
-      </a>
-    </section>
+            <article class="col">
+                <h1>Reorientation Core Group</h1>
+                <p>"Let's do something better with". The Reorientation Core Group is the associatiion 
+                    of high minded Louverturians who have the aim of reorienting the scrap tires in order to
+                    reduce their amounts in the Wide World and to reuse them brightly! 
+                    <br>
+                    We invite you all! To join us in order to save our wolrd together!!
+                </p>
+                <button><a href="galery.html">Visit Our Gallery</a></button>
+            </article>
 
-    <section class="step">
-      <h2 class="stepHeading">Instant Rollbacks</h2>
-      <p>
-        Confidently ship to production with the knowledge that it’s a
-        one-click operation to roll back to a previous version of the site.
-        <strong>Instant disaster recovery!</strong>
-      </p>
-      <a href="/instant-rollbacks" class="button">
-        Learn more
-        <span class="sr-only">about Instant Rollbacks</span>
-      </a>
+            <article class="col">
+                <section class="card card1">
+                    <h3 style="text-decoration: underline">Recycle</h3>
+                    <p>We recycle scrap tires!
+                    </p>
+                </section>
+                <section class="card card2">
+                    <h3 style="color: white; text-decoration: underline">Reduce</h3>
+                    <p>We reduce pollution!!
+                    </p>
+                </section>
+                <section class="card card3">
+                    <h3 style="text-decoration: underline; color: white;" >Transform</h3>
+                    <p>We transform scrap tires!
+                    </p>
+                </section>
+                <section class="card card4">
+                    <h3 style="text-decoration: underline">Save it</h3>
+                    <p>Of course, we save the world!
+                    </p>
+                </section>
+            </article>
+        </section>
     </section>
-
-    <section class="step">
-      <h2 class="stepHeading">Netlify Functions</h2>
-      <p>
-        <strong>Serverless functions are superpowers for web developers!</strong>
-        Securely handle server-like requirements at any scale with no
-        provisioning, scaling, or ops overhead.
-      </p>
-      <a href="/functions" class="button">
-      Learn more
-      <span class="sr-only">about Netlify Functions</span>
-      </a>
-    </section>
-
-    <section class="step">
-      <h2 class="stepHeading">Netlify Forms</h2>
-      <p>
-        Handle user input with a single line of code. Netlify Forms allow
-        any HTML form to
-        <strong>
-            accept submissions, send notification emails, and trigger custom events.
-        </strong>
-      </p>
-      <a href="/netlify-forms" class="button">
-        Learn more <span class="sr-only">about Netlify Forms</span>
-      </a>
-    </section>
-  </main>
-</Layout>
+</body>
+</html>
